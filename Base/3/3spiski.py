@@ -3,7 +3,7 @@ print(bicycles[0].title())
 print(bicycles[-1].upper())
 message = f'My first bicycle was {bicycles[0].upper()}. And you?'
 print("______________________")
-names = ['Jopa','Gawno','Piska','Mo4a']
+names = ['Jopa','Gao','Psa','Moa']
 print(names[0])
 print(names[-1].title())
 print(names[-2].upper())
