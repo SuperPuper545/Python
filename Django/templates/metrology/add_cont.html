@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Запись на диагностику</title>
+    <h1>Запись на диагностику</h1>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #bbbbbb;
+		}
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+		}
+		form {
+			width: 50%;
+			margin: 0 auto;
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+		}
+		label {
+			display: block;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+		input[type="text"], select {
+			display: block;
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+		}
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			transition: background-color 0.2s ease-in-out;
+		}
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+<form action="{% url 'add_cont' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary btn-block">Встать в очередь</button>
+</form>
+</body>
+</html>

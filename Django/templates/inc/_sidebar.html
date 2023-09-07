@@ -1,0 +1,21 @@
+    <div class="row">
+        {% for item in metrology %}
+            <div class="card" style="width: 18rem;">
+           {% if item.photo %}
+               <img src="{{ item.photo.url }}"  class="card-img-top" alt="Пример услуг">
+           {% else %}
+               <img src="https://picsum.photos/seed/picsum/200/150" alt="">
+           {% endif %}
+          <div class="card-body">
+            <h5 class="card-title">{{ item.organisation }}</h5>
+            <p class="card-text">{{ item.name_SI }}</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{ item.registration_number }}</li>
+          </ul>
+          <div class="card-body">
+            <a href="add-cont/" class="card-link">Подробнее...</a>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
