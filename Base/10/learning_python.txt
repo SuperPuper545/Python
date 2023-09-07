@@ -1,0 +1,4 @@
+In Python you can write your programms
+In Python you can open files
+In Python you can edit files
+In Python you can delete data in files
